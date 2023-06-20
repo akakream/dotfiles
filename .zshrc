@@ -12,13 +12,13 @@ alias rubymine="open -na \"RubyMine.app\" --args \"$@\""
 # Load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }
-
 # Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:git:*' formats 'on %b'
 
+autoload -U colors && colors
+
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
-PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$reset_color%}in %{$fg[yellow]%}%${PWD/#$HOME/~} %{$reset_color%}%# "
+PS1="%F{green}%n%f@%F{blue}%m%f %F{yellow}%~%f %# "
 RPROMPT="%{$fg[green]%}\$vcs_info_msg_0_%{$reset_color%}"
 
-autoload -U colors && colors
