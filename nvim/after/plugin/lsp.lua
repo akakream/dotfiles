@@ -18,6 +18,12 @@ lsp.nvim_workspace()
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
+cmp.setup({
+    mapping = cmp.mapping.preset.insert({
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+      }),
+})
+
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
