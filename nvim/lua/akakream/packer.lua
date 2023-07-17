@@ -51,4 +51,10 @@ use {
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
 
+use {
+    'akinsho/bufferline.nvim', tag = "*",
+    requires = 'nvim-tree/nvim-web-devicons'
+}
+
+
 end)
