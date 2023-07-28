@@ -17,6 +17,10 @@ lsp.nvim_workspace()
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
+local cmp_action = require('lsp-zero').cmp_action()
+local cmp_mappings = lsp.defaults.cmp_mappings({
+  ["<C-Space>"] = cmp.mapping.complete(),
+})
 
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
@@ -29,6 +33,7 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.set_preferences({
+
     suggest_lsp_servers = false,
     sign_icons = {
         error = 'E',
@@ -53,9 +58,9 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.setup()
-
 vim.diagnostic.config({
     virtual_text = true
 })
+
+lsp.setup()
 
