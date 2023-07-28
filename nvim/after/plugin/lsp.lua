@@ -14,6 +14,13 @@ lsp.ensure_installed({
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
 
+local util = require 'lspconfig/util'
+
+require'lspconfig'.pyright.setup{
+  root_dir = function(filename)
+    return util.root_pattern('.git')(filename) or util.path.dirname(filename)
+  end
+}
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
