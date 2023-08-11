@@ -54,8 +54,6 @@ use {
     'akinsho/bufferline.nvim', tag = "*",
     requires = 'nvim-tree/nvim-web-devicons'
 }
-use {
-    'jose-elias-alvarez/null-ls.nvim', tag = "*",
-}
+use('jose-elias-alvarez/null-ls.nvim')
 
 end)
