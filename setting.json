@@ -2,6 +2,10 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.addMissingImports": "explicit"
+  },
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -12,12 +16,10 @@
   "workbench.iconTheme": "material-icon-theme",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "window.zoomLevel": 1,
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
   "vim.enableNeovim": false,
-  "vim.neovimPath": "/usr/bin/nvim",
   "vim.searchHighlightColor": "rgba(150, 255, 255, 0.3)",
   "vim.leader": "<space>",
   "vim.easymotion": true,
@@ -37,51 +39,11 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
-    },
-    {
-      "before": ["<leader>", "i"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.terminal.focus"
-        }
-      ]
-    },
-    {
-      "before": ["<leader>", "u"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.focusActiveEditorGroup"
-        }
-      ]
-    },
-    {
       "before": ["<leader>", "p"],
       "after": [],
       "commands": [
         {
           "command": "workbench.action.quickOpen"
-        }
-      ]
-    },
-    {
-      "before": ["<leader>", "o"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.quickOpen"
-        }
-      ]
-    },
-    {
-      "before": ["<leader>", "n"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.terminal.toggleTerminal"
         }
       ]
     },
@@ -133,18 +95,8 @@
   "workbench.colorTheme": "Gruvbox Dark Hard",
   "editor.minimap.enabled": false,
   "workbench.sideBar.location": "right",
-  "[ruby]": {
-    "editor.defaultFormatter": "Shopify.ruby-lsp",
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
-    "editor.semanticHighlighting.enabled": true
-  },
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "editor.rulers": [120],
-  "rubyLsp.rubyVersionManager": "chruby",
-  "rubyLsp.enableExperimentalFeatures": true
+  "window.zoomLevel": 1
 }
-
